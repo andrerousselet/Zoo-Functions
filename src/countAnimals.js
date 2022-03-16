@@ -4,10 +4,17 @@ const { species } = data;
 // console.log(species);
 
 function countAnimals(animal) {
-  return species.reduce((objOfSpecies, currentSpecie) => {
-    objOfSpecies[currentSpecie.name] = currentSpecie.residents.length;
-    return objOfSpecies;
-  }, {});
+  if (animal === undefined) {
+    return species.reduce((acc, currentSpecie) => {
+      const objOfSpecies = acc;
+      if (!objOfSpecies[currentSpecie.name]) {
+        objOfSpecies[currentSpecie.name] = 0;
+      }
+      objOfSpecies[currentSpecie.name] = currentSpecie.residents.length;
+      return objOfSpecies;
+    }, {});
+  }
+  // return species.find(() => {}, 0);
 }
 console.log(countAnimals());
 
