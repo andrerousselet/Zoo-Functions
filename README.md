@@ -1,5 +1,7 @@
 # My Zoo Functions Project
 
+HOFs playground - creating and manipulating arrays with ES6 
+
 ## Developed Skills
 
 - High Order Functions (reduce, filter, map, find, forEach...)
